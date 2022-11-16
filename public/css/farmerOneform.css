@@ -1,0 +1,17 @@
+body{
+  background-color: bisque;
+  padding: 10px auto;
+  margin: 10px ;
+
+}
+
+.container.mt-3{
+  background-color: rgb(200, 218, 218);
+  margin: 10px auto;
+  width: 800px;
+}
+
+
+.button{
+  padding: 10px
+}

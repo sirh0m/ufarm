@@ -1,0 +1,61 @@
+doctype html
+| PASTE YOUR HTML CODE HERE
+head
+  title U FARM
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css' rel='stylesheet')
+  link(rel='stylesheet' href='css/uhomepage.css')
+.img
+  div(style='width:100%; height: 10%;')
+    img.img-fluid(src=' /images/pexels-photo-2131784.jpeg' style='width: 100%; margin-top: -40%;' alt='')
+nav.navbar.navbar-expand-lg.navbar-light.bg-light(style='position: absolute; top: 0px; width: 100%;')
+  .container-fluid
+    a.navbar-brand(href='/views/loginform.html' ) UFARM
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='#') Home
+        li.nav-item
+          a.nav-link(href='#') About us
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+            | Accounts
+          ul.dropdown-menu(aria-labelledby='navbarDropdown')
+            li
+              a.dropdown-item(href='/Login') Login
+            li
+              a.dropdown-item(href='/Register') SignUp
+        li.nav-ite
+          a.nav-link.Products(href='#' tabindex='-1' aria-products='true') Products
+div(style='margin-bottom: 20%;')
+footer.bg-dark.text-white.pt-5.pb-4
+  .container.text-center.text-md-left
+    .row.text-center.text-md-left
+      .col-md-3.col-lg-3.col-xl-3.mx-auto.mt-3
+        h4.text-uppercase.mb-4.font-weight-bold.text-warning Contact Us
+        i.bi.bi-telephone-fill(<p='')
+          | + 256 778909876
+          p
+        p
+          a.text-white(href='#' style='text-decoration: none;')
+            i.bi.bi-envelope-open-fill  farmUg@doc.org
+        p
+          a.text-white(href='#' style='text-decoration:none;')
+            i.bi.bi-twitter @farmUg_money
+      .col-md-2.col-lg-2.col-xl-2.mx-auto.mt-3
+        h4.text-uppercase.mb-4.font-weight-bold.text-warning ABOUT US
+        p
+          | We are the most trusted peers with high quality farm products ranging from all various prices and quantities. Trust us and we shall deliver
+      .col-md-4.col-lg-3.col-xl-3.mx-auto.mt-3
+        h4.text-uppercase.mb-4.font-weight-bold.text-warning PRODUCTS
+        p Ghee
+        p Youghurt
+        p Milk
+        p Butter
+        p Casein
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js')

@@ -1,0 +1,137 @@
+doctype html
+head
+  title U FARM
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css')
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css' rel='stylesheet')
+  link(rel='stylesheet' href='/css/AOdb.css')
+section
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light(style='position: absolute; top: 0px; width: 100%;')
+    .container-fluid
+      a.navbar-brand(href='#') UFARM
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.me-auto.mb-2.mb-lg-0
+          li.nav-item
+            a.nav-link.active(aria-current='page' href='#') Home
+          li.nav-item
+            a.nav-link(href='#') About us
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+              | Accounts
+            ul.dropdown-menu(aria-labelledby='navbarDropdown')
+              li
+                a.dropdown-item(href='#') Login
+              li
+                a.dropdown-item(href='#') SignUp
+          li.nav-item
+            a.nav-link.Products(href='#' tabindex='-1' aria-products='true') Products
+header
+  h2 Dashboard
+section
+  nav
+    ul
+      nav
+        #nav-tab.nav.nav-tabs(role='tablist')
+          button#nav-home-tab.nav-link.active(data-bs-toggle='tab' data-bs-target='#nav-home' type='button' role='tab' aria-controls='nav-home' aria-selected='true') Home
+          button#nav-profile-tab.nav-link(data-bs-toggle='tab' data-bs-target='#nav-profile' type='button' role='tab' aria-controls='nav-profile' aria-selected='false') Profile
+          button#nav-contact-tab.nav-link(data-bs-toggle='tab' data-bs-target='#nav-contact' type='button' role='tab' aria-controls='nav-contact' aria-selected='false') Contact
+      #nav-tabContent.tab-content
+        #nav-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='nav-home-tab')
+          .container.mt-3
+            h2.text-center
+              | FarmerOne Registration form 
+            form(action="/AOdb" method="post")
+              .row
+                .mt-2.col-3
+                  label(for='fullname') Name
+                  input#name.form-control(type='string' placeholder='Enter name' name='fullname')
+                .mt-2.col-3
+                  label(for='Ward') Ward:
+                  select.form-control(input='' type='string' id='ward' name='ward')
+                    option(value='Cell 01') Cell 01
+                    option(value='Cell 02') Cell 02
+                    option(value='Cell 03') Cell 03
+                    option(value='Cell 04') Cell 04
+                .mt-2.col-3
+                  label(for=' dateofRegistration') Date of Registration
+                  input#date.form-control(type='date' name=' dateofRegistration')
+                .mt-2.col-3
+                  label(for='dateofbirth') Date of Birth
+                  input#date.form-control(type='date' name='dateofbirth')
+                .mt-2.col-3
+                  label(for='Period of Stay') Period of Stay
+                  select.form-control(input='' type='string' id='user id' name='Period of Stay')
+                    option(value='10 years') 10 years
+                    option(value='15 year') 15 years
+                    option(value='17 years') 17 years
+                .mt-2.col-3
+                  label(for='direction') Resident Type
+                  select.form-control(input='' type='string' id='residentType' name='residentType')
+                    option(value='By Birth') By Birth
+                    | e
+                    option(value='By migration') By migration
+                .mt-2.col-3
+                  label(for='direction') Direction
+                  input#Direction.form-control(type='string' name='direction')
+                .mt-2.col-3
+                  label(for='NIN') NIN
+                  input#Direction.form-control(type='string' name='nin')
+                .mt-2.col-3
+                  label(for='userid') Unique ID
+                  input#Direction.form-control(type='string' name='userid')
+                .mt-2.col-3
+                  label(for='password') Password:
+                  input#pwd.form-control(type='password' placeholder='Enter password' name='password')
+                .mt-2.col-3
+                  label(for='contact') Phone Number
+                  input.form-control(type='Number' id='contact' name='contact')
+                .mt-2.col-3
+                  label(for='gender') Gender
+                  select#cars.form-control(name='cars')
+                    option(value='male') Male
+                    option(value='Female') Female
+                .mt-2.col-3
+                  label(for='activitiesUndertaken') Activities Undertaken
+                  select#cars.form-control(name='activitiesUndertaken')
+                    option(value='Registers urban farmer') Registers urban farmer
+                    option(value='Approves produce') Approves produce
+                .mt-2.col-3
+                  label(for='role') Role
+                  select#cars.form-control(name='role')
+                    option(value='')
+                    option(value='Farmerone') Farmerone
+              .button
+                button.btn.btn-primary(type='confirm') Confirm
+        #nav-profile.tab-pane.fade(role='tabpanel' aria-labelledby='nav-profile-tab') ...
+        #nav-contact.tab-pane.fade(role='tabpanel' aria-labelledby='nav-contact-tab') ...
+div(style='margin-bottom: 20%;')
+footer.bg-dark.text-white.pt-5.pb-4
+  .container.text-center.text-md-left
+    .row.text-center.text-md-left
+      .col-md-3.col-lg-3.col-xl-3.mx-auto.mt-3
+        h4.text-uppercase.mb-4.font-weight-bold.text-warning Contact Us
+        i.bi.bi-telephone-fill(<p='')
+          | + 256 778909876
+          p
+        p
+          a.text-white(href='#' style='text-decoration: none;')
+            i.bi.bi-envelope-open-fill  farmUg@doc.org
+        p
+          a.text-white(href='#' style='text-decoration:none;')
+            i.bi.bi-twitter @farmUg_money
+      .col-md-2.col-lg-2.col-xl-2.mx-auto.mt-3
+        h4.text-uppercase.mb-4.font-weight-bold.text-warning ABOUT US
+        p
+          | We are the most trusted peers with high quality farm products ranging from all various prices and quantities. Trust us and we shall deliver
+      .col-md-4.col-lg-3.col-xl-3.mx-auto.mt-3
+        h4.text-uppercase.mb-4.font-weight-bold.text-warning PRODUCTS
+        p Ghee
+        p Youghurt
+        p Milk
+        p Butter
+        p Casein
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js')
